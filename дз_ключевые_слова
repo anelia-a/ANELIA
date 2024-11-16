@@ -1,0 +1,31 @@
+def max_out_of_two(a, b):
+    if a > b:
+        return a
+    elif a < b:
+        return b
+    else:
+        return a or b
+
+def empty_function():
+    pass
+
+def even_number(n):
+    for i in range(n + 1):
+        if i % 2 == 0:
+            yield i
+
+def test_max_out_of_two():
+    assert max_out_of_two(7, 7.5) == 7.5, 'Ошибка: 7.5 больше 7.'
+    assert max_out_of_two(-1, 0) == 0, 'Ошибка: 0 больше -1.'
+    assert max_out_of_two(80, 80) == 80, 'Ошибка: числа равны.'
+    print('Все тесты пройдены!')
+
+result_1 = max_out_of_two(7, 7.5)
+print(result_1)
+
+empty_function()
+
+for value in even_number(7):
+    print(value)
+
+test_max_out_of_two()
